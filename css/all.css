@@ -1,0 +1,410 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  /*
+	padding: 0 42px;
+	*/
+  background: #ffffff;
+  box-shadow: 0 0 3px black;
+}
+.header {
+  padding: 30px 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header .header-logo {
+  display: block;
+  position: absolute;
+}
+.header .header-logo img {
+  display: block;
+  width: 219.49px;
+  height: 40px;
+}
+.header .header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 62.87%;
+  width: 29.3618%;
+}
+.header .header-menu li {
+  width: 100%;
+}
+.header .header-menu li a {
+  display: block;
+  color: #3f5d45;
+  font-family: PingFang TC, Semibold;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  /*
+	max-width: 92px;
+	*/
+}
+.header .header-menu li a:hover {
+  border-bottom: 3px solid #3f5d45;
+  line-height: 37px;
+}
+.header .header-shopcar {
+  position: absolute;
+  right: 42px;
+  background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true)
+    100% center no-repeat;
+  width: 40px;
+  font-size: 40px;
+  display: block;
+  text-indent: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 9px 0 7px;
+}
+@media (max-width: 390px) {
+  .header {
+    flex-direction: column;
+  }
+  .header .header-logo {
+    position: relative;
+  }
+  .header .header-menu {
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .header .header-shopcar {
+    bottom: 30px;
+  }
+}
+.banner {
+  /*
+	height: 496px;
+	background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/banner.png?raw=true) center center no-repeat;
+	*/
+  margin: 0px 42px 60px;
+}
+.banner img {
+  display: block;
+  max-width: 100%;
+  max-height: auto;
+}
+
+@media (max-width: 390px) {
+  .banner {
+    width: 94%;
+    height: auto;
+    margin: 0 3% 30px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1024px;
+  padding: 0 42px 60px;
+}
+@media (max-width: 390px) {
+  .content {
+    padding: 0 3% 30px;
+  }
+}
+.content .content-choice {
+  	width: 31.915%;
+}
+.content .content-choice ul li {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #eaf0ed;
+}
+.content .content-choice ul .content-choice-normal{
+	transition: all 1s;
+	opacity: 0;
+  height: 0;
+  border: 0px solid #eaf0ed;
+}
+.content .content-choice .content-choice-title{
+  font-family: PingFang TC, Semibold;
+  font-size: 24px;
+  line-height: 56px;
+  text-align: center;
+  color: #eaf0ed;
+  background: #3f5d45;
+}
+.content .content-choice ul .content-choice-normal a{
+  display: none;
+}
+.content .content-choice ul li a:hover {
+  background: #eaf0ed;
+}
+.content .content-choice ul:hover .content-choice-normal{
+	opacity: 1;
+  height: 57.25px;
+  border: 1px solid #eaf0ed;
+}
+.content .content-choice ul:hover .content-choice-normal a{
+  font-family: PingFang TC, Semibold;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3f5d45;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  line-height: 56px;
+}
+@media (max-width: 390px) {
+  .content .content-choice .content-choice-title {
+    font-size: 14px;
+    line-height: 2.33;
+  }
+  /*
+  .content .content-choice ul li a {
+    font-size: 14px;
+    line-height: 2.33;
+  }
+  */
+  .content .content-choice ul:hover .content-choice-normal{
+    height: 32.62px;
+  }
+  .content .content-choice ul:hover .content-choice-normal a{
+    font-size: 14px;
+    line-height: 2.33;
+  }
+}
+.content .content-product {
+  width: 65.95745%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.content .content-product .content-product-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content .content-product .content-product-item li {
+  border: 1px solid #eaf0ed;
+  width: 48.3875%;
+  margin-bottom: 20px;
+  position: relative;
+}
+.content .content-product .content-product-special {
+  writing-mode: vertical-lr;
+  position: absolute;
+  left: 6.667%;
+  background: #3f5d45;
+  font-size: 16px;
+  letter-spacing: 4px;
+  padding: 13.3665px 0;
+  line-height: 36px;
+  color: #eaf0ed;
+}
+.content .content-product .content-product-item .content-product-favorite {
+  position: absolute;
+  display: block;
+  right: 7.33334%;
+  width: 6.699%;
+  background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true)
+    center center no-repeat;
+  text-indent: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.content .content-product .content-product-item li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.content .content-product .content-product-title {
+  display: flex;
+  justify-content: space-between;
+  line-height: 56px;
+}
+.content .content-product .content-product-title .content-product-name {
+  width: 57.667%;
+  font-family: PingFang TC, Light;
+  font-size: 20px;
+  text-align: center;
+  color: #3f5d45;
+}
+.content .content-product .content-product-title .content-product-price {
+  width: 42%;
+  font-family: PingFang TC, Light;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #3f5d45;
+  border-left: 1px solid #eaf0ed;
+}
+.content .content-product .content-product-item li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  font-family: PingFang TC, Semibold;
+  font-size: 24px;
+  line-height: 56px;
+  font-weight: bold;
+  color: #3f5d45;
+  background: #eaf0ed;
+}
+
+@media (max-width: 390px) {
+  .content .content-product .content-product-special {
+    font-size: 9.3px;
+    line-height: 2.33;
+    letter-spacing: 2.33px;
+    writing-mode: horizontal-tb;
+    padding: 0;
+    left: 5%;
+    top: 0%;
+  }
+  .content .content-product .content-product-item .content-product-favorite {
+    width: 20%;
+    height: 10%;
+  }
+  .content .content-product .content-product-title {
+    flex-direction: column;
+    line-height: 2.33;
+  }
+  .content .content-product .content-product-title .content-product-name {
+    width: 100%;
+    font-size: 11.66px;
+  }
+  .content .content-product .content-product-title .content-product-price {
+    width: 100%;
+    font-size: 11.66px;
+  }
+  .content .content-product .content-product-item li a {
+    font-size: 13.92px;
+    line-height: 2.33;
+  }
+}
+.content .content-product .content-product-nextbutton li {
+  width: 100%;
+  border-right: 1px solid #eaf0ed;
+}
+.content .content-product .content-product-nextbutton {
+  width: 48.3875%;
+  margin-top: 10px;
+  display: flex;
+  border: 1px solid #eaf0ed;
+  border-right: 0px;
+}
+.content .content-product .content-product-nextbutton .back a {
+  display: block;
+  line-height: 60px;
+  background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_left.png?raw=true)
+    center center no-repeat;
+  text-indent: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.content .content-product .content-product-nextbutton .next a {
+  display: block;
+  line-height: 60px;
+  background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_right.png?raw=true)
+    center center no-repeat;
+  text-indent: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.content .content-product .content-product-nextbutton .normal a {
+  display: block;
+  text-decoration: none;
+  font-family: PingFang TC, Light;
+  font-size: 20px;
+  line-height: 60px;
+  text-align: center;
+  color: #3f5d45;
+}
+.content .content-product .content-product-nextbutton .normal a:hover {
+  color: #eaf0ed;
+  background: #3f5d45;
+}
+@media (max-width: 390px) {
+  .content .content-product .content-product-nextbutton {
+    width: 100%;
+  }
+  .content .content-product .content-product-nextbutton .back a {
+    width: 100%;
+    height: 27.1833px;
+  }
+  .content .content-product .content-product-nextbutton .next a {
+    width: 100%;
+    height: 27.1833px;
+  }
+  .content .content-product .content-product-nextbutton .normal a {
+    width: 100%;
+    font-size: 11.66px;
+    line-height: 27.1833px;
+    font-weight: bold;
+  }
+}
+.footer {
+  background: #eaf0ed;
+  padding: 100px 0;
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+}
